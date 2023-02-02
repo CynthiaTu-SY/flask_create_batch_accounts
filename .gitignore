@@ -1,0 +1,3 @@
+flask_env/
+instance/*.db
+website/__pycache__/
