@@ -23,6 +23,7 @@ After account creation, the users can login to check their groupmates.
 ## Features
 - File type and file size validation
 - Unit user and group in DB
+- Pagination
 
 ## CICD
 This repositry is connected with Azure App Service, once push to main branch, the update will be built and deploy to the web app.
