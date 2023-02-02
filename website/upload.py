@@ -61,7 +61,8 @@ def fileParse(filepath):
                 else:
                     print("Create New User and add to existing Group")
                     groupexist.users.append(new_user)
-                    db.session.add_all(new_user)
+                    userobject.append(new_user)
+                    db.session.add_all(userobject)
             print("Start commit")
             db.session.commit()
         except:

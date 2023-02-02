@@ -39,7 +39,6 @@ def showgroupmembers(username, linkuuid, page):
         .offset((page-1)*limit)\
         .limit(limit+1)\
         .all()
-
     print('you have {} groupmates'.format(len(groupmates_list)))
     if not groupmates_list:
         if page != 1:
