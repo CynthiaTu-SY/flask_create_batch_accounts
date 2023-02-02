@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Upload{% endblock %} {% block content
+    %}
+    <h1 align="center">Upload TXT File</h1>
+    <form method='POST' enctype='multipart/form-data'>
+        <div class="form-group", align="center">    
+        {{form.hidden_tag()}}
+        {{form.file()}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <!-- </div> -->
+        <div class="card border-primary mb-3" style="max-width: 50rem; margin-top: 50px;">
+            <div class="card-header">Welcome!</div>
+            <div class="card-body">
+              <h4 class="card-title">Introduction</h4>
+              <p class="card-text">This website allow user to create a batch of user accounts by uploading a user. After the accounts are created, the account owner can log in to check his/her groupmates.
+                This project is trying to demostrating how a tester can create tons of account in short time during UAT to test the access control of a tested system. 
+              </p>
+              <h4 class="card-title">Instruction for use</h4>
+              <p class="card-text" style="text-align: left">The process is as follows:</p>
+              <p class="card-text" style="text-align: left; padding-left:10px">1. Upload a TXT file with a list of username:password:groupname.</p>
+              <p class="card-text" style="text-align: left; padding-left:25px">a. single file upload</p>
+              <p class="card-text" style="text-align: left; padding-left:25px">b. only allow .txt file</p>
+              <p class="card-text" style="text-align: left; padding-left:25px">c. empty file is not accepted</p>
+              <p class="card-text" style="text-align: left; padding-left:25px">d. user list example</p>
+              <p class="card-text" style="text-align: left; padding-left:35px">user1:pd1:gp1</p>
+              <p class="card-text" style="text-align: left; padding-left:35px">user2:pd2:gp1</p>
+              <p class="card-text" style="text-align: left; padding-left:35px">user2:pd2:gp2</p>
+              <p class="card-text" style="text-align: left; padding-left:35px">user3:pd3:gp2</p>               
+              <p class="card-text" style="text-align: left; padding-left:10px">2. After accounts created, you can go to login page to check groupmates of different users.</p>
+              <h4 class="card-title">Case Handling</h4>
+              <p class="card-text" style="text-align: left; padding-left:10px">1. If ueser already exist in DB,</p>
+              <p class="card-text" style="text-align: left; padding-left:25px">a. link user to the new group or existing group if the password match the DB record</p>
+              <p class="card-text" style="text-align: left; padding-left:25px">b. ignore if the password DO NOT match the DB record</p>
+              <p class="card-text" style="text-align: left; padding-left:10px">2. Create account in DB for new user and link the user to the new group or existing group</p>
+            </div>
+        </div>
+    </div>   
+    </form>
+{% endblock %}

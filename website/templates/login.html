@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+    %}
+    <form method="POST">
+        <h3 align="center">Login</h3>
+        <div class="form-group">
+          <label for="username">User Name</label>
+          <input
+            type="username"
+            class="form-control"
+            id="username"
+            name="username"
+            placeholder="Enter username"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+          />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Log in</button>
+        <div class="card border-primary mb-3" style="max-width: 50rem; margin: auto; margin-top: 30px;">
+            <div class="card-header">Log In</div>
+            <div class="card-body">
+              <h6 class="card-title">Please login with your username and password to get the list of your groupmates.</h6>
+              <h4 class="card-title">Security design included at the back-end</h4>
+              <p class="card-text">The groupmate list page will have a random uuid for each login, in order to avoid a user get the user list by skip the login page easily.</p>
+              <p class="card-text">All passwords will encrypted and stored into database.</p>
+            </div>
+        </div>
+      </form>
+{% endblock %}

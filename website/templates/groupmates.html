@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block title %}groupmates{% endblock %} {% block content
+    %}
+    <h1 align="center">Groupmates</h1>
+    
+    <table  class="table table-hover" >
+      <tr class="table-secondary">
+        <th scope="col">Group Name</th>
+        <th scope="col">User Name</th>
+      </tr>
+      {% for tablerow in batchresult %}
+      <tr>
+        <td scope="row">{{ tablerow.groupname }}</td>
+        <td>{{ tablerow.username }}</td>      
+      </tr>      
+      {% endfor %}
+    </table>
+    <br />
+    <div>
+      <ul class="pagination pagination-lg">
+        {% if page>1 %}
+        <li class="page-item">
+          <a class="page-link" href="{{url_for('result.showgroupmembers', username=username, linkuuid=linkuuid, page=page-1)}}">&laquo;</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+          <a class="page-link" href="{{url_for('result.showgroupmembers', username=username, linkuuid=linkuuid, page=page-1)}}">&laquo;</a>
+        </li>
+        {% endif %}
+        <label class="btn btn-outline-primary" for="page">{{page}}</label>
+        {% if not end %}  
+        <li class="page-item">
+          <a class="page-link" href="{{url_for('result.showgroupmembers', username=username, linkuuid=linkuuid, page=page+1)}}">&raquo;</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+          <a class="page-link" href="{{url_for('result.showgroupmembers', username=username, linkuuid=linkuuid, page=page+1)}}">&raquo;</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+{% endblock %}
