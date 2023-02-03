@@ -1,6 +1,6 @@
 # Project Introduction
-This is a website that allows users to upload a text file which includes a list of user account info to creat tons of accounts by batch.
-After account creation, the users can login to check their groupmates.
+This is a website that allows users to upload a text file which includes a list of user account information to creat tons of accounts by batch.
+After accounts creation, the users can login to check their groupmates.
 
 # Azure demo
 - App Sevice: https://createaccounts.azurewebsites.net
@@ -17,7 +17,7 @@ After account creation, the users can login to check their groupmates.
 - 
 # Required dependencies
 - Python 3.9 libraries
-    - List provided in [requirements.txt](https://github.com/CynthiaTu-SY/VirusTotal_Batch_Search/blob/3dbbbdd60d6c1303df942dbd5efd51ff308878e7/requirements.txt)
+    - List provided in [requirements.txt](https://github.com/CynthiaTu-SY/flask_create_batch_accounts/blob/main/requirements.txt)
 
 # Issues encountered
 ## Features

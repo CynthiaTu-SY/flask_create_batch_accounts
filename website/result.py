@@ -44,7 +44,7 @@ def showgroupmembers(username, linkuuid, page):
         if page != 1:
             flash('Incorrect page index in url, report is ended in previous page.', category='error')
         else:
-            flash('No valid hash value found in uploaded file', category='error')
+            flash('No groupmate found in data base!', category='error')
         end_page = True
     elif len(groupmates_list) <= limit:
         end_page = True
